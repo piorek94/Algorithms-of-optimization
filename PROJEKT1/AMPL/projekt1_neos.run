@@ -1,0 +1,10 @@
+reset;
+model projekt1.mod;
+data projekt1.dat;
+option solver kestrel;
+option kestrel_options 'solver=lancelot';
+option lancelot_options 'gtol=1.0e-5';
+option neos_server 'www.neos-server.org:3333';
+solve;
+display m_lon_cor;
+display m_lat_cor;

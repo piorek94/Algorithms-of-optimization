@@ -1,0 +1,37 @@
+param n := 3;				#number of given points
+param d :=
+			1 	4
+			2 	13.4
+			3 	4.1	;		#vector of distances between POI and given points
+param lat_deg :
+				1	2	3 :=
+			1	52	45	54
+			2	52	40	27
+			3	52	43	37 ;#matrix of latitude of given points
+
+							 
+param lon_deg :
+				1	2	3 :=
+			1	22	37	23
+			2	22	30	47
+			3	22	44	00 ;#matrix of longitude of given points
+#initial point
+#point 0,0
+let m_lon_rad := (0+0/60+0/3600)*pi/180;
+let m_lat_rad := (0+0/60+0/3600)*pi/180;
+
+#point A +1''
+#let m_lon_rad := (22+37/60+24/3600)*pi/180;
+#let m_lat_rad := (52+45/60+55/3600)*pi/180;
+
+#point B +1''
+#let m_lon_rad := (22+30/60+48/3600)*pi/180;
+#let m_lat_rad := (52+40/60+28/3600)*pi/180;
+
+#point C +1''
+#let m_lon_rad := (22+44/60+1/3600)*pi/180;
+#let m_lat_rad := (52+43/60+38/3600)*pi/180;
+
+#average point (A+B+C)/3
+#let m_lon_rad := (22+37/60+23/3600)*pi/180;
+#let m_lat_rad := (52+43/60+19/3600)*pi/180;

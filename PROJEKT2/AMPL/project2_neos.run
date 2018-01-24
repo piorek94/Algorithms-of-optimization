@@ -1,0 +1,15 @@
+reset;
+# load model and data files
+model project2.mod;
+data project2.dat;
+option solver kestrel;
+option kestrel_options 'solver=knitro';
+#option kestrel_options 'solver=CONOPT';
+#option kestrel_options 'solver=CPLEX';
+option neos_server 'www.neos-server.org:3333';
+solve;
+# display decision variables
+display x1;
+display x2;
+display u;
+#on AMPL server works SNOPT LOQO LANCELOT DONLP2

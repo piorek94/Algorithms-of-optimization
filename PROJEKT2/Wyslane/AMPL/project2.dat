@@ -1,0 +1,6 @@
+param t0 := 0;				#start time
+param tf := 1;				#end time
+param N := 50;				#number of samples
+param x10 := 0;				#x1(0)
+param x20 :=-1;				#x2(0)
+param Initial_point := -5;	#initial point for all var

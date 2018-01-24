@@ -1,0 +1,21 @@
+reset;
+# load model and data files
+model project2.mod;
+data project2.dat;
+option solver minos;
+option minos_options 'optimality_tolerance=1e-6';
+solve;
+# display decision variables
+display x1;
+display x2;
+display u;
+
+#parameters for minos
+#optimality_tolerance=1.0e1 decrease -> more iteration but better value 
+#partial_price= 1 increase -> less time but more iteratrion (larger when variables are much more then constrainst)
+#feasibility_tolerance=1.0e-6 - constraints
+#crash_option=3
+#iterations_limit=100
+#linesearch_tolerance= 0.1 decrease -> decrease time and iteration(but more evaluation), decreace when functions are cheap to evaluate
+#subspace_tolerance=0.5 decrease->increasing iterations but less basis changes
+#minor_damping_parameter=2 decrease -> more evaluations
